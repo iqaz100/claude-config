@@ -1,0 +1,22 @@
+# Private / credentials
+.credentials.json
+settings.json
+
+# Conversation & session data
+history.jsonl
+sessions/
+projects/
+tasks/
+todos/
+
+# Generated / cache
+backups/
+cache/
+debug/
+downloads/
+file-history/
+paste-cache/
+shell-snapshots/
+
+# Plugins (marketplace data)
+plugins/
