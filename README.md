@@ -41,32 +41,3 @@ Project-level `CLAUDE.md` files take precedence over this global config.
     └── feedback_global.md     # Corrections and confirmed good practices
 ```
 
-## Rules
-
-### `rules/memory.md`
-Defines when Claude automatically saves memories (corrections, confirmations, user context, project decisions) and how to structure memory files by type: `feedback`, `user`, `project`, `reference`.
-
-### `rules/angular.md`
-Standards for TypeScript/Angular development:
-- Import order (Angular core → third-party → local)
-- Standalone components only, `inject()` over constructor DI
-- Signals API (`input()`, `output()`, `signal()`, `computed()`) for new components
-- Angular 17+ control flow (`@if`, `@for`) in new templates
-- No `any`, explicit return types, `interface` for data shapes
-
-### `rules/django.md`
-Standards for Python/Django REST Framework:
-- Import order (stdlib → Django → DRF → third-party → local)
-- Explicit field lists in serializers (no `fields = "__all__"`)
-- Thin views — business logic in service classes or model methods
-- Two-class exception pattern (domain exception + DRF `APIException`)
-- `factory_boy` in tests, `force_login` for auth
-
-## What's excluded
-
-See `.gitignore`. Not tracked:
-- `.credentials.json` — API key
-- `settings.json` — local Claude Code settings (MCP servers, permissions, etc.)
-- `history.jsonl`, `sessions/`, `projects/` — conversation data
-- `backups/`, `cache/`, `debug/`, `file-history/` — generated files
-- `plugins/` — marketplace data
