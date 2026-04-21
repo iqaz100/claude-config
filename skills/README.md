@@ -42,6 +42,16 @@ These skills help you think through problems before writing code.
   npx skills@latest add mattpocock/skills/request-refactor-plan
   ```
 
+## Code Review
+
+- **code-review** — Full-stack code review for Angular + Django REST Framework projects. Orchestrates `django-reviewer` and `angular-reviewer` agents in parallel against files in the working tree.
+
+- **code-review-agent** — Fan-out code review via Anthropic API. Generates a `git diff <target-branch>...HEAD` (or accepts a pasted diff), then runs 5 specialist subagents in parallel (Architecture, Security, Performance, Code Quality, Tests) and combines their findings with a synthesis agent into one prioritised Markdown report (🔴 Critical / 🟡 Warning / 🟢 Good practice). Project standards from `CLAUDE.md` and memory are injected into every subagent's system prompt.
+
+  Trigger: "zrób review do maina", "przejrzyj zmiany względem develop", "sprawdź diff", or paste/upload a `.diff` / `.patch` file.
+
+  Requires: `ANTHROPIC_API_KEY`, Node.js ≥ 18, `@anthropic-ai/sdk`.
+
 ## Development
 
 These skills help you write, refactor, and fix code.
